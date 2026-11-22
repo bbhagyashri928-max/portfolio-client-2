@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Subtle botanical branch/leaves motif for quote card & decorative accents -->
+  <g opacity="0.3" fill="#6A8D73">
+    <!-- Main stem -->
+    <path d="M110,110 C85,95 65,65 50,30" stroke="#6A8D73" stroke-width="2" stroke-linecap="round"/>
+    <!-- Leaves branching off -->
+    <path d="M78,85 C70,75 72,62 82,60 C90,62 92,75 78,85 Z" />
+    <path d="M68,72 C55,70 50,58 58,50 C66,50 72,60 68,72 Z" />
+    <path d="M58,52 C52,42 56,32 66,32 C72,35 72,46 58,52 Z" />
+    <path d="M50,32 C40,28 38,18 48,15 C54,16 58,24 50,32 Z" />
+    <path d="M92,95 C88,88 95,78 104,80 C110,84 108,94 92,95 Z" />
+  </g>
+</svg>

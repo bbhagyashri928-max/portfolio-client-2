@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEAB3" />
+      <stop offset="45%" stop-color="#DFC17B" />
+      <stop offset="70%" stop-color="#C7A356" />
+      <stop offset="100%" stop-color="#9E782F" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#C7A356" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Outer delicate dashed golden border ring -->
+  <circle cx="80" cy="80" r="74" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" stroke-dasharray="3 3.5" opacity="0.65" />
+  <circle cx="80" cy="80" r="68" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.4" />
+
+  <!-- Laurel Wreath & Crown -->
+  <g fill="url(#goldGrad)" filter="url(#goldGlow)">
+    <!-- Top 5-pointed star -->
+    <polygon points="80,18 82.5,25 90,25.5 84.5,30.5 86.5,38 80,33.5 73.5,38 75.5,30.5 70,25.5 77.5,25" />
+
+    <!-- Left Wreath Leaves -->
+    <path d="M68,26 C63,29 57,34 54,40 C52,44 55,46 59,42 C62,39 65,33 68,26 Z" />
+    <path d="M57,37 C51,42 45,50 43,58 C42,63 46,64 49,59 C52,54 54,46 57,37 Z" />
+    <path d="M46,53 C40,60 36,70 36,79 C36,84 41,84 43,78 C45,72 45,63 46,53 Z" />
+    <path d="M41,75 C37,83 37,94 39,103 C40,108 45,107 46,101 C47,94 45,85 41,75 Z" />
+    <path d="M44,98 C42,107 46,118 52,126 C55,130 59,128 58,122 C56,115 51,106 44,98 Z" />
+    <path d="M54,120 C55,128 62,137 70,143 C74,146 77,142 74,138 C70,131 63,124 54,120 Z" />
+
+    <!-- Right Wreath Leaves -->
+    <path d="M92,26 C97,29 103,34 106,40 C108,44 105,46 101,42 C98,39 95,33 92,26 Z" />
+    <path d="M103,37 C109,42 115,50 117,58 C118,63 114,64 111,59 C108,54 106,46 103,37 Z" />
+    <path d="M114,53 C120,60 124,70 124,79 C124,84 119,84 117,78 C115,72 115,63 114,53 Z" />
+    <path d="M119,75 C123,83 123,94 121,103 C120,108 115,107 114,101 C113,94 115,85 119,75 Z" />
+    <path d="M116,98 C118,107 114,118 108,126 C105,130 101,128 102,122 C104,115 109,106 116,98 Z" />
+    <path d="M106,120 C105,128 98,137 90,143 C86,146 83,142 86,138 C90,131 97,124 106,120 Z" />
+
+    <!-- Bottom Tied Ribbon -->
+    <circle cx="80" cy="144" r="3.5" />
+    <path d="M78,146 C71,151 65,155 60,157 C63,153 69,149 76,147 Z" />
+    <path d="M82,146 C89,151 95,155 100,157 C97,153 91,149 84,147 Z" />
+  </g>
+
+  <!-- Open Book in Center -->
+  <g fill="none" stroke="url(#goldGrad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#goldGlow)">
+    <!-- Book spine & pages -->
+    <path d="M80,63 L80,111" stroke-width="2.2" />
+    <path d="M80,66 C67,58 51,61 46,65 L46,108 C53,104 67,102 80,109 C93,102 107,104 114,108 L114,65 C109,61 93,58 80,66 Z" />
+    <!-- Page text lines -->
+    <path d="M52,78 C60,75 70,77 74,80" stroke-width="1.8" opacity="0.85" />
+    <path d="M52,87 C60,84 70,86 74,89" stroke-width="1.8" opacity="0.85" />
+    <path d="M52,96 C60,93 70,95 74,98" stroke-width="1.8" opacity="0.85" />
+    <path d="M108,78 C100,75 90,77 86,80" stroke-width="1.8" opacity="0.85" />
+    <path d="M108,87 C100,84 90,86 86,89" stroke-width="1.8" opacity="0.85" />
+    <path d="M108,96 C100,93 90,95 86,98" stroke-width="1.8" opacity="0.85" />
+  </g>
+</svg>
+

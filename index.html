@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Principal's Portfolio — Shaping Bright Minds, Building a Better Tomorrow</title>
+  <meta name="description" content="Official portfolio of the Principal. Dedicated to academic excellence, innovation, holistic student development, and institutional leadership.">
+  
+  <!-- Google Fonts: Cormorant Garamond for elegant serif typography & Plus Jakarta Sans for modern UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Mobile Header Bar -->
+  <header class="mobile-header">
+    <div class="mobile-logo-wrap">
+      <img src="assets/logo.svg" alt="Principal Emblem" class="mobile-logo">
+      <span class="mobile-title">Principal's Portfolio</span>
+    </div>
+    <div class="mobile-header-actions">
+      <button class="mobile-search-btn" id="mobileSearchBtn" aria-label="Search portfolio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- Main Application Wrapper -->
+  <div class="app-layout">
+    
+    <!-- Left Navigation Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Logo Emblem at top -->
+      <div class="sidebar-brand">
+        <a href="#home" class="brand-link" aria-label="Principal Portfolio Home">
+          <div class="logo-container">
+            <img src="assets/logo.svg" alt="Principal Laurel Wreath Crest" class="brand-logo">
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="sidebar-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active" data-section="home">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+                </svg>
+              </span>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link" data-section="about">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="nav-text">About</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#vision-mission" class="nav-link" data-section="vision-mission">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </span>
+              <span class="nav-text">Vision &amp; Mission</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#focus-areas" class="nav-link" data-section="focus-areas">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                  <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                  <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                  <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                </svg>
+              </span>
+              <span class="nav-text">Focus Areas</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#achievements" class="nav-link" data-section="achievements">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path>
+                  <path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path>
+                  <path d="M4 4h16v7a8 8 0 0 1-16 0V4z"></path>
+                  <path d="M12 15v5"></path>
+                  <path d="M8 20h8"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Achievements</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#message" class="nav-link" data-section="message">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <line x1="8" y1="9" x2="16" y2="9"></line>
+                  <line x1="8" y1="13" x2="14" y2="13"></line>
+                </svg>
+              </span>
+              <span class="nav-text">Message</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-section="contact">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Sidebar Motto & Diamond Ornament -->
+      <div class="sidebar-footer">
+        <div class="sidebar-motto">
+          <p class="motto-line">Educate</p>
+          <p class="motto-line">Empower</p>
+          <p class="motto-line">Excel</p>
+        </div>
+        <div class="diamond-divider">
+          <span class="line"></span>
+          <span class="diamond">◆</span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <!-- Subtle background leaf accent -->
+      <div class="sidebar-leaf-bg"></div>
+    </aside>
+
+    <!-- Main Canvas Area -->
+    <main class="main-content">
+
+      <!-- Top Header Controls Bar -->
+      <header class="top-nav-bar">
+        <div class="top-label-wrap">
+          <span class="decor-line"></span>
+          <span class="top-label">PRINCIPAL'S PORTFOLIO</span>
+          <span class="decor-line"></span>
+        </div>
+
+        <div class="top-actions">
+          <button class="search-trigger-btn" id="searchTriggerBtn" title="Search Portfolio (Ctrl+K)" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          
+          <button class="connect-top-btn" id="topConnectBtn">
+            <span>Connect</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-container">
+          
+          <!-- Left Hero Content -->
+          <div class="hero-text-col">
+            <div class="hero-subtitle-bar">
+              <span class="subtitle-rule"></span>
+              <span class="subtitle-text">PRINCIPAL'S PORTFOLIO</span>
+              <span class="subtitle-rule"></span>
+            </div>
+
+            <h1 class="hero-heading" id="heroHeading">
+              Shaping Bright Minds,<br>
+              <span class="hero-italic">Building a Better Tomorrow</span>
+            </h1>
+
+            <p class="hero-description" id="heroDesc">
+              Committed to academic excellence, innovation and holistic development.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn btn-dark-green" id="heroCtaBtn">
+                <span>Know More</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+
+            <!-- Carousel Indicator Dots -->
+            <div class="carousel-dots" role="tablist" aria-label="Hero Slides">
+              <button class="dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+              <button class="dot" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+              <button class="dot" data-slide="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+            </div>
+          </div>
+
+          <!-- Right Hero Visual Banner with Architectural Building -->
+          <div class="hero-image-col">
+            <div class="hero-image-wrapper">
+              <img src="assets/campus-hero.jpg" alt="University Academic Campus Building" class="hero-campus-img" id="heroImg">
+              <div class="hero-image-glow"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Smooth Curved Swoop Divider -->
+        <div class="hero-curve-divider">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C150,80 350,110 550,85 C750,60 1000,115 1200,95 L1200,120 L0,120 Z" fill="#FDF8F4"></path>
+          </svg>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="about-grid">
+
+          <!-- Left Card: Book Stack with Graduation Cap -->
+          <div class="about-card books-card">
+            <div class="books-img-frame">
+              <img src="assets/about-books.jpg" alt="Academic Graduation Cap on Books" class="books-img">
+              <div class="books-shadow-overlay"></div>
+            </div>
+          </div>
+
+          <!-- Center Content: About Narrative -->
+          <div class="about-card narrative-card">
+            <div class="narrative-inner">
+              <h2 class="section-heading about-title">
+                About <span class="heading-dash">—</span>
+              </h2>
+              <p class="about-lead">
+                A visionary leader dedicated to fostering academic excellence, encouraging innovation, and empowering every individual to achieve their fullest potential.
+              </p>
+              <div class="about-cta-wrap">
+                <button class="btn btn-outline-dark" id="aboutLearnMoreBtn">
+                  <span>Learn More</span>
+                  <span class="btn-arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card: Inspiring Quote Card -->
+          <div class="about-card quote-card">
+            <div class="quote-inner">
+              <div class="quote-mark-wrap">
+                <span class="quote-icon">“</span>
+              </div>
+              <blockquote class="quote-text">
+                Education is not just about knowledge, but about building a better society.
+              </blockquote>
+              <div class="quote-leaf-decor">
+                <img src="assets/leaf-motif.svg" alt="Botanical Leaf Accent" class="leaf-svg">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Vision & Mission Section -->
+      <section id="vision-mission" class="vision-mission-section">
+        <div class="vm-background-wrap">
+          <!-- Hills and Flag Scenic Landscape on Right -->
+          <div class="hills-landscape-layer">
+            <img src="assets/hills-flag.jpg" alt="Scenic Green Hills with Flag" class="hills-bg-img">
+          </div>
+          <!-- Organic SVG Curves -->
+          <svg class="vm-contour-svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+            <path d="M0,180 C250,260 450,140 700,210 C850,250 950,210 1000,180 L1000,300 L0,300 Z" fill="#E8F1EC" opacity="0.6"/>
+            <path d="M0,230 C300,290 600,220 850,270 C950,285 980,270 1000,260 L1000,300 L0,300 Z" fill="#DCE9E2" opacity="0.8"/>
+            <path d="M0,265 C400,300 700,275 1000,295 L1000,300 L0,300 Z" fill="#C5DDD0" opacity="0.5"/>
+          </svg>
+        </div>
+
+        <div class="vm-container">
+          <!-- Left Header Col -->
+          <div class="vm-title-col">
+            <div class="vm-title-accent"></div>
+            <div class="vm-heading-wrap">
+              <h2 class="vm-main-heading">Vision &amp; Mission</h2>
+              <p class="vm-tagline">
+                Guiding today,<br>
+                Inspiring tomorrow.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Cards Col -->
+          <div class="vm-cards-col">
+            
+            <!-- Vision Card -->
+            <div class="vm-card vision-card" id="visionCard">
+              <div class="vm-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#112D1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <div class="vm-card-text">
+                <h3 class="vm-card-title">Vision</h3>
+                <p class="vm-card-desc">To build a centre of academic excellence and innovation.</p>
+              </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="vm-card mission-card" id="missionCard">
+              <div class="vm-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#112D1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <div class="vm-card-text">
+                <h3 class="vm-card-title">Mission</h3>
+                <p class="vm-card-desc">To nurture talent, promote knowledge and contribute to society.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Focus Areas Section -->
+      <section id="focus-areas" class="focus-section">
+        <div class="section-header-centered">
+          <span class="decor-h-line"></span>
+          <h2 class="focus-main-heading">Key Focus Areas</h2>
+          <span class="decor-h-line"></span>
+        </div>
+
+        <div class="focus-grid">
+
+          <!-- 1. Academic Excellence -->
+          <div class="focus-card" data-focus="academic" tabindex="0" role="button" aria-label="Learn more about Academic Excellence">
+            <div class="focus-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
+            </div>
+            <h3 class="focus-title">Academic Excellence</h3>
+            <span class="focus-hover-hint">View details →</span>
+          </div>
+
+          <!-- 2. Innovation & Research -->
+          <div class="focus-card" data-focus="innovation" tabindex="0" role="button" aria-label="Learn more about Innovation and Research">
+            <div class="focus-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+                <path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.5 4.5 3 6h8c1.5-1.5 3-3.5 3-6a7 7 0 0 0-7-7z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="10" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+            <h3 class="focus-title">Innovation &amp; Research</h3>
+            <span class="focus-hover-hint">View details →</span>
+          </div>
+
+          <!-- 3. Student Development -->
+          <div class="focus-card" data-focus="student" tabindex="0" role="button" aria-label="Learn more about Student Development">
+            <div class="focus-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+            </div>
+            <h3 class="focus-title">Student Development</h3>
+            <span class="focus-hover-hint">View details →</span>
+          </div>
+
+          <!-- 4. Industry Collaboration -->
+          <div class="focus-card" data-focus="industry" tabindex="0" role="button" aria-label="Learn more about Industry Collaboration">
+            <div class="focus-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.8 6.2c-.4-.4-1.1-.4-1.5 0l-4.1 4.1-2.3-2.3c-.4-.4-1.1-.4-1.5 0L3.2 14.2c-.4.4-.4 1.1 0 1.5l1.6 1.6c.4.4 1.1.4 1.5 0l4.7-4.7 2.3 2.3c.4.4 1.1.4 1.5 0l5.5-5.5c.4-.4.4-1.1 0-1.5l-1.5-1.7z"/>
+                <path d="M19 14l-2-2 3.5-3.5 2 2z" opacity="0.7"/>
+              </svg>
+            </div>
+            <h3 class="focus-title">Industry Collaboration</h3>
+            <span class="focus-hover-hint">View details →</span>
+          </div>
+
+          <!-- 5. Institutional Growth -->
+          <div class="focus-card" data-focus="growth" tabindex="0" role="button" aria-label="Learn more about Institutional Growth">
+            <div class="focus-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm10-20L2 6v2h19V6l-9-4z"/>
+              </svg>
+            </div>
+            <h3 class="focus-title">Institutional Growth</h3>
+            <span class="focus-hover-hint">View details →</span>
+          </div>
+
+          <!-- 6. Social Responsibility -->
+          <div class="focus-card" data-focus="social" tabindex="0" role="button" aria-label="Learn more about Social Responsibility">
+            <div class="focus-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 3.32 2.31 6.09 5.43 6.84L12 22l1.57-6.16C16.69 15.09 19 12.32 19 9c0-3.87-3.13-7-7-7zm-1 10.9V4.18c2.83.48 5 2.94 5 5.82 0 1.25-.41 2.4-1.1 3.34-1.07-.3-2.61-.44-3.9-.44z"/>
+              </svg>
+            </div>
+            <h3 class="focus-title">Social Responsibility</h3>
+            <span class="focus-hover-hint">View details →</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Bottom Feature Cards: Achievements, Message, Connect -->
+      <section class="bottom-features-section">
+        <div class="features-grid">
+
+          <!-- Card 1: Achievements -->
+          <div id="achievements" class="feature-card achievements-card">
+            <div class="card-left-decor">
+              <!-- Small Trophy Icon -->
+              <div class="small-trophy-icon">
+                <svg viewBox="0 0 24 24" fill="#DFBE82">
+                  <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0 0 11 15.9V19H7v2h10v-2h-4v-3.1c1.8-.41 3.25-1.8 3.61-3.06C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="card-content-center">
+              <h3 class="feature-card-title">Achievements</h3>
+              <p class="feature-card-desc">
+                Celebrating milestones and contributions towards excellence.
+              </p>
+              <button class="btn btn-emerald-outline" id="achievementsBtn">
+                <span>View Highlights</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+
+            <div class="card-right-visual">
+              <img src="assets/trophy-element.png" alt="Golden Trophy Award" class="trophy-img">
+            </div>
+          </div>
+
+          <!-- Card 2: Principal's Message -->
+          <div id="message" class="feature-card message-card">
+            <div class="card-content-center">
+              <h3 class="feature-card-title dark-text">Principal's Message</h3>
+              <p class="feature-card-desc dark-text">
+                Inspiring thoughts for a brighter future.
+              </p>
+              <button class="btn btn-outline-dark" id="principalMessageBtn">
+                <span>Read Message</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+
+            <div class="card-right-visual pen-visual-wrap">
+              <img src="assets/pen-element.png" alt="Golden Fountain Pen" class="pen-img">
+            </div>
+          </div>
+
+          <!-- Card 3: Let's Connect -->
+          <div id="contact" class="feature-card connect-card">
+            <div class="card-content-center">
+              <h3 class="feature-card-title">Let's Connect</h3>
+              <p class="feature-card-desc">
+                Together for a better tomorrow.
+              </p>
+              <button class="btn btn-cream-pill" id="letsConnectBtn">
+                <span>Contact Us</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+
+            <div class="card-right-visual airplane-visual-wrap">
+              <img src="assets/airplane-element.png" alt="Paper Airplane with Trajectory" class="airplane-img">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Wave Ribbon Footer -->
+      <footer class="footer-section">
+        <!-- Golden wave accent curve line -->
+        <div class="footer-wave-top">
+          <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,25 C300,50 600,0 900,35 C1050,50 1150,20 1200,30 L1200,60 L0,60 Z" fill="#0C251B"></path>
+            <path d="M0,25 C300,50 600,0 900,35 C1050,50 1150,20 1200,30" fill="none" stroke="#D4AF37" stroke-width="1.8" opacity="0.65"></path>
+          </svg>
+        </div>
+
+        <div class="footer-content">
+          <!-- Left Logo & Title -->
+          <div class="footer-brand">
+            <img src="assets/logo.svg" alt="Principal Crest" class="footer-crest">
+            <div class="footer-v-divider"></div>
+            <span class="footer-title">Principal's Portfolio</span>
+          </div>
+
+          <!-- Center Motto Pillars -->
+          <div class="footer-pillars">
+            <span>Education</span>
+            <span class="bullet">•</span>
+            <span>Innovation</span>
+            <span class="bullet">•</span>
+            <span>Progress</span>
+          </div>
+
+          <!-- Right Social Links -->
+          <div class="footer-socials">
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube Channel">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
+              </svg>
+            </a>
+            
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 0-2.9 1.45 1.45 0 0 0 0 2.9m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+              </svg>
+            </a>
+
+            <!-- Mail/Envelope -->
+            <button class="social-circle-btn" id="footerMailBtn" aria-label="Send Email">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="sub-footer">
+          <p>© 2026 Office of the Principal. All rights reserved.</p>
+          <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+            <span>↑ Top</span>
+          </button>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ==================== MODALS & POPUPS ==================== -->
+
+  <!-- 1. Search Modal -->
+  <div class="modal" id="searchModal" aria-hidden="true" role="dialog" aria-labelledby="searchModalTitle">
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-box modal-search-box">
+      <div class="modal-header">
+        <h3 id="searchModalTitle" class="modal-title">Search Portfolio</h3>
+        <button class="modal-close-btn" data-close="modal" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="search-input-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-input-icon">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="portfolioSearchInput" placeholder="Search focus areas, vision, leadership, achievements..." autocomplete="off">
+        </div>
+        <div class="search-results-list" id="searchResultsList">
+          <div class="search-hint">Type a keyword to discover institutional initiatives, messages, or achievements.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. "Know More" Institutional Highlights Modal -->
+  <div class="modal" id="knowMoreModal" aria-hidden="true" role="dialog" aria-labelledby="knowMoreTitle">
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <div class="modal-header-badge">Institutional Overview</div>
+        <h3 id="knowMoreTitle" class="modal-title">Academic Leadership &amp; Institutional Governance</h3>
+        <button class="modal-close-btn" data-close="modal" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="stats-counter-strip">
+          <div class="stat-card">
+            <span class="stat-num">28+</span>
+            <span class="stat-label">Years of Educational Leadership</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">15,000+</span>
+            <span class="stat-label">Global Alumni Network</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">98.4%</span>
+            <span class="stat-label">Career &amp; Placement Success</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">45+</span>
+            <span class="stat-label">Research Patents &amp; Papers</span>
+          </div>
+        </div>
+
+        <div class="modal-text-content">
+          <h4>Core Philosophy: Fostering Transformative Learning</h4>
+          <p>
+            Under the visionary stewardship of the Principal, our institution is committed to continuous curricular evolution, student-first pedagogy, and international benchmark accreditations. We bridge the gap between rigorous academic foundations and emerging 21st-century technological and societal paradigms.
+          </p>
+          <div class="highlights-pill-grid">
+            <div class="highlight-pill">✓ NAAC A++ &amp; NBA Accredited Programs</div>
+            <div class="highlight-pill">✓ 40+ International University Collaborations</div>
+            <div class="highlight-pill">✓ State-of-the-Art Innovation &amp; Incubation Labs</div>
+            <div class="highlight-pill">✓ Comprehensive Scholarship &amp; Merit Endowments</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-dark" data-close="modal">Close</button>
+        <button class="btn btn-dark-green" id="knowMoreContactTrigger">Schedule Meeting</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. "Learn More" (About Principal) Modal -->
+  <div class="modal" id="aboutModal" aria-hidden="true" role="dialog" aria-labelledby="aboutModalTitle">
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <div class="modal-header-badge">Leadership Profile</div>
+        <h3 id="aboutModalTitle" class="modal-title">Biographical Overview &amp; Academic Journey</h3>
+        <button class="modal-close-btn" data-close="modal" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="bio-layout">
+          <div class="bio-img-col">
+            <div class="bio-avatar-frame">
+              <img src="assets/about-books.jpg" alt="Academic Distinction" class="bio-avatar">
+            </div>
+            <div class="bio-quote-callout">
+              “Leadership is not about title or prestige; it is about inspiring each learner to unlock their boundless potential.”
+            </div>
+          </div>
+          <div class="bio-text-col">
+            <h4>Academic Distinction &amp; Credentials</h4>
+            <p>
+              Holding a Ph.D. in Educational Administration &amp; Higher Learning from premier university consortia, alongside specialized master's research in cognitive pedagogy and curriculum architecture, the Principal has served over two and a half decades in academic governance.
+            </p>
+            <h4>Pillars of Stewardship</h4>
+            <ul class="bio-bullets">
+              <li><strong>Student-Centric Empowerment:</strong> Creating experiential learning environments that cultivate critical inquiry, psychological safety, and creative risk-taking.</li>
+              <li><strong>Ethical &amp; Inclusive Leadership:</strong> Driving institutional equity, cultural diversity, and value-based character formation.</li>
+              <li><strong>Research &amp; Innovation Culture:</strong> Mentoring faculty and undergraduate research fellowships with prestigious national funding grants.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-dark-green" data-close="modal">Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Achievements Modal -->
+  <div class="modal" id="achievementsModal" aria-hidden="true" role="dialog" aria-labelledby="achievementsModalTitle">
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <div class="modal-header-badge">Honor Roll &amp; Accreditations</div>
+        <h3 id="achievementsModalTitle" class="modal-title">Institutional Milestones &amp; Honors</h3>
+        <button class="modal-close-btn" data-close="modal" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <div class="timeline-badge">2026</div>
+            <div class="timeline-content">
+              <h4>National Leadership in Education Excellence Award</h4>
+              <p>Recognized by the National Higher Education Council for trailblazing digital-physical hybrid classrooms and green campus sustainability.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">2025</div>
+            <div class="timeline-content">
+              <h4>Global Academic Partnership Endowment ($5M)</h4>
+              <p>Spearheaded an inter-institutional research compact spanning 12 countries in sustainable engineering, artificial intelligence, and human ecology.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">2024</div>
+            <div class="timeline-content">
+              <h4>A++ Institutional Accreditation Ranking</h4>
+              <p>Achieved the highest echelon of academic compliance, student satisfaction indexes, and faculty publication metrics.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">2023</div>
+            <div class="timeline-content">
+              <h4>Best Student Innovation &amp; Start-Up Incubator</h4>
+              <p>Over 35 student-founded ventures incubated with patent filings and venture capital backing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-dark-green" data-close="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Principal's Message Modal -->
+  <div class="modal" id="messageModal" aria-hidden="true" role="dialog" aria-labelledby="messageModalTitle">
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-box modal-lg modal-parchment">
+      <div class="modal-header">
+        <div class="modal-header-badge badge-gold">Annual Address</div>
+        <h3 id="messageModalTitle" class="modal-title font-serif">A Message from the Principal's Desk</h3>
+        <button class="modal-close-btn" data-close="modal" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body letter-format">
+        <div class="letter-date">Academic Session 2026 – 2027</div>
+        <div class="letter-greeting">Dear Students, Faculty Colleagues, Parents, and Esteemed Community Members,</div>
+        
+        <p>
+          It is an honor and a profound privilege to welcome you to our institution's digital home. Education has never been solely the transmission of textbooks or the mastery of examinations; rather, it is the lighting of an inner flame that forever banishes ignorance and illuminates pathbreaking ideas for human progress.
+        </p>
+        <p>
+          In an era where technology accelerates at breathtaking speed, our mission remains anchored in timeless values: integrity of thought, compassionate empathy, fierce perseverance, and fearless curiosity. We do not simply prepare students for jobs that exist today—we cultivate resilient minds capable of authoring the disciplines and industries of tomorrow.
+        </p>
+        <p>
+          To every student embarking on this journey: believe in your unique gifts. Question assumptions, dare to collaborate, embrace constructive failure as a stepping stone, and remember that your greatest achievement will always be measured by how your knowledge elevates those around you.
+        </p>
+
+        <div class="letter-signoff">
+          <div class="signoff-words">Warm regards and steadfast commitment,</div>
+          <div class="signoff-signature font-serif">Office of the Principal</div>
+          <div class="signoff-title">Principal &amp; Chair of Academic Council</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-dark" data-close="modal">Close Message</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Contact / Connect Modal -->
+  <div class="modal" id="connectModal" aria-hidden="true" role="dialog" aria-labelledby="connectModalTitle">
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-badge">Get in Touch</div>
+        <h3 id="connectModalTitle" class="modal-title">Connect with the Principal's Office</h3>
+        <button class="modal-close-btn" data-close="modal" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="contact-office-info">
+          <div class="office-row">
+            <span class="office-label">Executive Office:</span>
+            <span class="office-val">Administrative Hall, Suite 101, Main Academic Campus</span>
+          </div>
+          <div class="office-row">
+            <span class="office-label">Office Hours:</span>
+            <span class="office-val">Mon – Fri: 09:00 AM – 04:30 PM (By Appointment)</span>
+          </div>
+          <div class="office-row">
+            <span class="office-label">Direct Inquiries:</span>
+            <span class="office-val">principal.office@institution.edu</span>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="contactName">Your Full Name <span class="required">*</span></label>
+            <input type="text" id="contactName" required placeholder="Dr. / Mr. / Ms. Full Name">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactEmail">Email Address <span class="required">*</span></label>
+              <input type="email" id="contactEmail" required placeholder="name@domain.edu">
+            </div>
+            <div class="form-group">
+              <label for="contactAffiliation">Affiliation</label>
+              <select id="contactAffiliation">
+                <option value="Student">Current / Prospective Student</option>
+                <option value="Parent">Parent or Guardian</option>
+                <option value="Faculty">Faculty or Academic Researcher</option>
+                <option value="Industry">Industry / Corporate Partner</option>
+                <option value="Alumni">Distinguished Alumni</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject">Subject / Nature of Request <span class="required">*</span></label>
+            <input type="text" id="contactSubject" required placeholder="e.g. Appointment Request / Academic Collaboration">
+          </div>
+
+          <div class="form-group">
+            <label for="contactMsg">Message / Brief Notes <span class="required">*</span></label>
+            <textarea id="contactMsg" rows="4" required placeholder="Please provide details regarding your inquiry..."></textarea>
+          </div>
+
+          <div id="formFeedback" class="form-feedback-msg" style="display:none;"></div>
+
+          <button type="submit" class="btn btn-dark-green btn-block" id="contactSubmitBtn">
+            <span>Send Message to Principal's Office</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Focus Area Detail Modal -->
+  <div class="modal" id="focusDetailModal" aria-hidden="true" role="dialog" aria-labelledby="focusDetailTitle">
+    <div class="modal-backdrop" data-close="modal"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-badge" id="focusModalBadge">Strategic Pillar</div>
+        <h3 id="focusDetailTitle" class="modal-title">Focus Area Details</h3>
+        <button class="modal-close-btn" data-close="modal" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body" id="focusDetailContent">
+        <!-- Injected via JavaScript based on clicked focus area -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-dark-green" data-close="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" role="alert">
+    <span class="toast-icon">✓</span>
+    <span class="toast-msg" id="toastMessage">Action completed successfully.</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
