@@ -1,5 +1,5 @@
 /**
- * PRINCIPAL'S PORTFOLIO — JAVASCRIPT CONTROLLER
+ * PRINCIPAL'S THOUGHTS & VISION — JAVASCRIPT CONTROLLER
  * Features:
  * - Dynamic Carousel with dot navigation & auto-rotation
  * - Interactive Modals (Bio, Accreditations, Focus Areas, Search, Connect)
