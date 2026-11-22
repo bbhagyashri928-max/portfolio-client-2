@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="goldCup" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE8A3"/>
+      <stop offset="35%" stop-color="#E5C158"/>
+      <stop offset="70%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#8F6813"/>
+    </linearGradient>
+    <linearGradient id="goldBase" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8F6813"/>
+      <stop offset="50%" stop-color="#F5D77F"/>
+      <stop offset="100%" stop-color="#8F6813"/>
+    </linearGradient>
+    <filter id="trophyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#E5C158" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#trophyGlow)">
+    <!-- Trophy Handles -->
+    <path d="M28,24 C14,24 14,46 28,48" stroke="url(#goldCup)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M72,24 C86,24 86,46 72,48" stroke="url(#goldCup)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Cup Body -->
+    <path d="M26,16 L74,16 C74,16 76,46 50,56 C24,46 26,16 26,16 Z" fill="url(#goldCup)"/>
+    
+    <!-- Cup Rim -->
+    <ellipse cx="50" cy="16" rx="24" ry="4" fill="#FFE8A3"/>
+
+    <!-- Star Emblem on Cup -->
+    <polygon points="50,26 52.5,33 60,33.5 54.5,38 56.5,45 50,41 43.5,45 45.5,38 40,33.5 47.5,33" fill="#FFF6D1"/>
+
+    <!-- Stem / Pillar -->
+    <path d="M46,55 L54,55 L56,72 L44,72 Z" fill="url(#goldCup)"/>
+    <ellipse cx="50" cy="72" rx="9" ry="2.5" fill="url(#goldBase)"/>
+
+    <!-- Pedestal Base -->
+    <path d="M38,74 L62,74 L66,86 L34,86 Z" fill="url(#goldBase)"/>
+    <rect x="32" y="86" width="36" height="5" rx="1.5" fill="#5A400B"/>
+    <rect x="36" y="78" width="28" height="6" rx="1" fill="#FFE8A3" opacity="0.4"/>
+  </g>
+</svg>

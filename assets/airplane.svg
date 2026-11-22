@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EDE2D0"/>
+    </linearGradient>
+    <filter id="planeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Dotted Trajectory Flight Path -->
+  <path d="M12,88 C18,84 25,75 22,66 C18,55 35,50 48,58 C60,65 65,55 70,42" 
+        stroke="#F7CB8E" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4" opacity="0.85"/>
+
+  <!-- Paper Airplane Body -->
+  <g filter="url(#planeShadow)" transform="translate(18, 5)">
+    <!-- Right Wing (Under) -->
+    <polygon points="56,12 18,54 36,46" fill="#D8C8B0"/>
+    <!-- Main Center Fold -->
+    <polygon points="56,12 36,46 42,58" fill="#C4B49C"/>
+    <!-- Left Wing (Top / Lit) -->
+    <polygon points="56,12 36,46 14,34" fill="url(#planeGrad)"/>
+    <!-- Center Crease highlight -->
+    <line x1="56" y1="12" x2="36" y2="46" stroke="#FFFFFF" stroke-width="1.2"/>
+  </g>
+</svg>

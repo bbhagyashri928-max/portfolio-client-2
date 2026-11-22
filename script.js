@@ -18,17 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Shaping Compassionate Healers,<br><span class="hero-italic">Building a Healthier Tomorrow</span>',
       desc: 'Dedicated to clinical excellence, oncology nursing, and empowering students from rural and underserved communities to transform healthcare.',
-      img: 'assets/campus-hero.jpg'
+      img: 'assets/college-campus-jalna.jpg'
     },
     {
       title: 'Clinical Mastery &amp; Simulation,<br><span class="hero-italic">Hands-on Experiential Learning</span>',
       desc: 'Equipping nurses with state-of-the-art skills labs, bedside rotations at Jalna General Hospital, and surgical trauma care training.',
-      img: 'assets/campus-hero.jpg'
+      img: 'assets/college-campus-jalna.jpg'
     },
     {
       title: 'Empowering Rural Communities,<br><span class="hero-italic">Transforming Public Health</span>',
       desc: 'Mobilizing 50+ rural health screening drives, immunization, and community outreach across Marathwada under visionary stewardship.',
-      img: 'assets/campus-hero.jpg'
+      img: 'assets/college-campus-jalna.jpg'
     }
   ];
 
@@ -42,12 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showSlide(index) {
     currentSlideIndex = (index + slides.length) % slides.length;
-    
+
     // Update Heading & Description with smooth fade
     if (heroHeading && heroDesc) {
       heroHeading.style.opacity = '0';
       heroDesc.style.opacity = '0';
-      
+
       setTimeout(() => {
         heroHeading.innerHTML = slides[currentSlideIndex].title;
         heroDesc.textContent = slides[currentSlideIndex].desc;
@@ -263,32 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const focusCards = document.querySelectorAll('.focus-card');
-  const focusModal = document.getElementById('focusDetailModal');
-  const focusModalBadge = document.getElementById('focusModalBadge');
-  const focusDetailTitle = document.getElementById('focusDetailTitle');
-  const focusDetailContent = document.getElementById('focusDetailContent');
 
-  focusCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const type = card.getAttribute('data-focus');
-      const data = focusData[type];
-      if (data) {
-        focusModalBadge.textContent = data.badge;
-        focusDetailTitle.textContent = data.title;
-        focusDetailContent.innerHTML = data.content;
-        openModal('focusDetailModal');
-      }
-    });
-
-    // Keyboard accessibility for card buttons
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        card.click();
-      }
-    });
-  });
 
   // =========================================================================
   // 4. LIVE SEARCH FUNCTIONALITY
@@ -298,15 +273,15 @@ document.addEventListener('DOMContentLoaded', () => {
     { cat: 'Vision & Mission', title: 'Our Vision — Benchmark Learning Institution in Healthcare', target: 'vision-mission' },
     { cat: 'Vision & Mission', title: 'Our Mission — Quality Nursing Education for Rural Communities', target: 'vision-mission' },
     { cat: 'Institutional Highlights', title: 'Government Sanction, MUHS Code 154153, CET 09385 & AISHE C-74466', modal: 'knowMoreModal' },
-    { cat: 'Focus Area', title: 'Clinical Competence, Bedside Rotations & Simulation Skills Lab', focus: 'academic' },
-    { cat: 'Focus Area', title: 'Medical Surgical & Oncology Nursing Specialization', focus: 'innovation' },
-    { cat: 'Focus Area', title: 'Rural Health & Social Inclusion for Underserved Students', focus: 'student' },
-    { cat: 'Focus Area', title: 'Ethics, Empathy, Nightingale Oath & SWA Leadership', focus: 'industry' },
-    { cat: 'Focus Area', title: 'Institutional Growth & State Govt / MUHS Nashik Conformance', focus: 'growth' },
-    { cat: 'Focus Area', title: 'Public Health Outreach & 50+ Rural Health Screening Camps', focus: 'social' },
-    { cat: 'Achievements', title: 'Milestones: 2024 Govt Conformance, MUHS Affiliation & SWA Honors', modal: 'achievementsModal' },
-    { cat: 'Official Message', title: 'Message from the Principal’s Desk — Mr. Manoj L. Deshmukh', modal: 'messageModal' },
-    { cat: 'Contact & Office', title: 'Office of the Principal, Jalna (govt.bscnursingjalna@gmail.com)', modal: 'connectModal' }
+    { cat: 'Focus Area', title: 'Clinical Competence, Bedside Rotations & Simulation Skills Lab', target: 'focus-areas' },
+    { cat: 'Focus Area', title: 'Medical Surgical & Oncology Nursing Specialization', target: 'focus-areas' },
+    { cat: 'Focus Area', title: 'Rural Health & Social Inclusion for Underserved Students', target: 'focus-areas' },
+    { cat: 'Focus Area', title: 'Ethics, Empathy, Nightingale Oath & SWA Leadership', target: 'focus-areas' },
+    { cat: 'Focus Area', title: 'Institutional Growth & State Govt / MUHS Nashik Conformance', target: 'focus-areas' },
+    { cat: 'Focus Area', title: 'Public Health Outreach & 50+ Rural Health Screening Camps', target: 'focus-areas' },
+    { cat: 'Achievements', title: 'Milestones: 2024 Govt Conformance, MUHS Affiliation & SWA Honors', target: 'achievements' },
+    { cat: 'Official Message', title: 'Message from the Principal’s Desk — Mr. Manoj L. Deshmukh', target: 'message' },
+    { cat: 'Contact & Office', title: 'Office of the Principal, Jalna (govt.bscnursingjalna@gmail.com)', target: 'contact' }
   ];
 
   const searchInput = document.getElementById('portfolioSearchInput');
@@ -315,14 +290,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (searchInput && searchResultsList) {
     searchInput.addEventListener('input', (e) => {
       const q = e.target.value.toLowerCase().trim();
-      
+
       if (!q) {
         searchResultsList.innerHTML = '<div class="search-hint">Type a keyword to discover institutional initiatives, messages, or achievements.</div>';
         return;
       }
 
-      const matches = searchableItems.filter(item => 
-        item.title.toLowerCase().includes(q) || 
+      const matches = searchableItems.filter(item =>
+        item.title.toLowerCase().includes(q) ||
         item.cat.toLowerCase().includes(q)
       );
 
