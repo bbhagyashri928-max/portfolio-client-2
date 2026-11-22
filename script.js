@@ -16,18 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   const slides = [
     {
-      title: 'Shaping Bright Minds,<br><span class="hero-italic">Building a Better Tomorrow</span>',
-      desc: 'Committed to academic excellence, innovation and holistic development.',
+      title: 'Shaping Compassionate Healers,<br><span class="hero-italic">Building a Healthier Tomorrow</span>',
+      desc: 'Dedicated to clinical excellence, oncology nursing, and empowering students from rural and underserved communities to transform healthcare.',
       img: 'assets/campus-hero.jpg'
     },
     {
-      title: 'Igniting Curiosity,<br><span class="hero-italic">Pioneering Breakthrough Research</span>',
-      desc: 'Equipping scholars with interdisciplinary inquiry, world-class labs, and creative problem-solving.',
+      title: 'Clinical Mastery &amp; Simulation,<br><span class="hero-italic">Hands-on Experiential Learning</span>',
+      desc: 'Equipping nurses with state-of-the-art skills labs, bedside rotations at Jalna General Hospital, and surgical trauma care training.',
       img: 'assets/campus-hero.jpg'
     },
     {
-      title: 'Nurturing Character,<br><span class="hero-italic">Empowering Global Stewards</span>',
-      desc: 'Instilling integrity, resilience, and compassionate leadership in every graduate.',
+      title: 'Empowering Rural Communities,<br><span class="hero-italic">Transforming Public Health</span>',
+      desc: 'Mobilizing 50+ rural health screening drives, immunization, and community outreach across Marathwada under visionary stewardship.',
       img: 'assets/campus-hero.jpg'
     }
   ];
@@ -150,7 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Modal Trigger Buttons
   const triggerMap = [
-    { btnId: 'heroCtaBtn', modalId: 'knowMoreModal' },
+    { btnId: 'heroCtaBtn', modalId: 'messageModal' },
+    { btnId: 'heroKnowMoreBtn', modalId: 'knowMoreModal' },
     { btnId: 'aboutLearnMoreBtn', modalId: 'aboutModal' },
     { btnId: 'achievementsBtn', modalId: 'achievementsModal' },
     { btnId: 'principalMessageBtn', modalId: 'messageModal' },
@@ -177,87 +178,87 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   const focusData = {
     academic: {
-      badge: 'Academic Excellence',
-      title: 'Scholastic Rigor, Outcome-Based Curricula & Faculty Development',
+      badge: 'Clinical Competence',
+      title: 'Skills Laboratory & Bedside Clinical Rotations',
       content: `
-        <p>Our academic framework is grounded in experiential mastery, interdisciplinary research, and continuous pedagogical refinement:</p>
+        <p>Our clinical curriculum is grounded in experiential mastery, simulation-based training, and bedside patient care:</p>
         <div class="highlights-pill-grid" style="margin-bottom: 1.2rem;">
-          <div class="highlight-pill">✓ Outcome-Based Education (OBE) Model</div>
-          <div class="highlight-pill">✓ Choice-Based Credit System (CBCS)</div>
-          <div class="highlight-pill">✓ Dual Faculty Research Mentorship</div>
-          <div class="highlight-pill">✓ 100% Smart Classrooms &amp; Cloud LMS</div>
+          <div class="highlight-pill">✓ Hands-On Medical Simulation Mannequins</div>
+          <div class="highlight-pill">✓ Bedside Rotations at Jalna General Hospital</div>
+          <div class="highlight-pill">✓ Intensive Critical Care &amp; Emergency Protocols</div>
+          <div class="highlight-pill">✓ Demonstration Bays for Surgical Procedures</div>
         </div>
-        <p>Faculty members are encouraged to publish in Scopus-indexed and Web of Science journals, supported by institutional research grants and sabbaticals for international colloquia.</p>
+        <p>Under expert faculty guidance, every student translates theoretical nursing science into confident, compassionate clinical practice across hospital wards and emergency units.</p>
       `
     },
     innovation: {
-      badge: 'Innovation & Research',
-      title: 'Breakthrough Discovery, Patents & Student Incubation Hub',
+      badge: 'Medical Surgical & Oncology',
+      title: 'Specialized Oncology Nursing & Surgical Intensive Care',
       content: `
-        <p>Empowering faculty and students to translate creative concepts into tangible societal solutions:</p>
+        <p>Led by the academic expertise of Mr. Manoj L. Deshmukh (M.Sc. Nursing, Oncology), students receive cutting-edge clinical training:</p>
         <div class="highlights-pill-grid" style="margin-bottom: 1.2rem;">
-          <div class="highlight-pill">✓ Technology Business Incubator (TBI)</div>
-          <div class="highlight-pill">✓ Seed Funding for Student Start-Ups</div>
-          <div class="highlight-pill">✓ In-House Patent &amp; IPR Facilitation Cell</div>
-          <div class="highlight-pill">✓ Advanced Robotics &amp; AI Research Labs</div>
+          <div class="highlight-pill">✓ Chemotherapy &amp; Oncology Nursing Regimens</div>
+          <div class="highlight-pill">✓ Surgical ICU Pre- &amp; Post-Operative Management</div>
+          <div class="highlight-pill">✓ Palliative Care &amp; Psycho-Oncology Counseling</div>
+          <div class="highlight-pill">✓ Patient Pain Management &amp; Rehabilitation</div>
         </div>
-        <p>Annual research symposiums and hackathons connect our innovators directly with government grants and venture capital networks.</p>
+        <p>Training prepares nurses to manage complex surgical interventions and deliver empathetic supportive therapy to cancer patients and their families.</p>
       `
     },
     student: {
-      badge: 'Student Development',
-      title: 'Holistic Mentorship, Cultural Societies & Leadership Clubs',
+      badge: 'Rural Health & Social Inclusion',
+      title: 'Empowering Underserved Communities & Grassroots Healthcare',
       content: `
-        <p>Education extends far beyond academic transcripts. We nurture well-rounded, emotionally resilient global citizens:</p>
+        <p>Established with a noble mission to bridge healthcare disparities across rural Maharashtra:</p>
         <div class="highlights-pill-grid" style="margin-bottom: 1.2rem;">
-          <div class="highlight-pill">✓ 30+ Student-Run Clubs &amp; Societies</div>
-          <div class="highlight-pill">✓ Dedicated Counseling &amp; Wellness Centre</div>
-          <div class="highlight-pill">✓ National &amp; Inter-University Sports League</div>
-          <div class="highlight-pill">✓ Executive Leadership Masterclasses</div>
+          <div class="highlight-pill">✓ Focused Inclusion for Rural &amp; Underserved Students</div>
+          <div class="highlight-pill">✓ Full State Govt Scholarship &amp; Welfare Facilitation</div>
+          <div class="highlight-pill">✓ Mentorship for State CET &amp; MUHS Examinations</div>
+          <div class="highlight-pill">✓ English &amp; Professional Communication Workshops</div>
         </div>
-        <p>Every student is paired with a dedicated faculty mentor from day one to guide their scholastic, personal, and professional trajectory.</p>
+        <p>We nurture grassroots talent into globally competent nursing professionals who return to serve and elevate rural community healthcare.</p>
       `
     },
     industry: {
-      badge: 'Industry Collaboration',
-      title: 'Corporate Partnerships, Global Internships & Co-Op Programs',
+      badge: 'Ethics & SWA Leadership',
+      title: 'Nightingale Oath, Patient Dignity & Student Welfare Association',
       content: `
-        <p>Bridging academia with real-world corporate demands through active industry integration:</p>
+        <p>Fostering compassionate professional ethos and holistic student governance under SWA Presidency:</p>
         <div class="highlights-pill-grid" style="margin-bottom: 1.2rem;">
-          <div class="highlight-pill">✓ 100+ Active Corporate MoUs</div>
-          <div class="highlight-pill">✓ Sponsored Industry R&amp;D Projects</div>
-          <div class="highlight-pill">✓ Structured 6-Month Paid Internships</div>
-          <div class="highlight-pill">✓ Corporate Advisory Council for Curricula</div>
+          <div class="highlight-pill">✓ Nightingale Lamp Lighting Induction Ceremony</div>
+          <div class="highlight-pill">✓ Student Welfare Association (SWA) Governance</div>
+          <div class="highlight-pill">✓ Mental Wellness, Counseling &amp; Peer Support</div>
+          <div class="highlight-pill">✓ Annual Sports Meets &amp; Cultural Colloquiums</div>
         </div>
-        <p>Executive speakers, industry immersion bootcamps, and mock interview panels ensure our graduates hit the ground running with 98.4% placement rates.</p>
+        <p>Upholding the sacred trust between nurse and patient through unwavering ethical standards, empathy, and professional integrity.</p>
       `
     },
     growth: {
-      badge: 'Institutional Growth',
-      title: 'Sustainable Infrastructure, Endowments & Campus Expansion',
+      badge: 'Institutional Conformance',
+      title: 'Public Health Dept Sanction, MUHS Nashik & AISHE Conformance',
       content: `
-        <p>Investing in future-proof facilities that inspire collaborative inquiry and environmental harmony:</p>
+        <p>A benchmark government institution operating under state and national regulatory compliance:</p>
         <div class="highlights-pill-grid" style="margin-bottom: 1.2rem;">
-          <div class="highlight-pill">✓ Net-Zero Carbon &amp; Solar-Powered Campus</div>
-          <div class="highlight-pill">✓ Digital Library with 500,000+ E-Journals</div>
-          <div class="highlight-pill">✓ Global Alumni Endowment Fund</div>
-          <div class="highlight-pill">✓ Modern Residential Quarters &amp; Amphitheatre</div>
+          <div class="highlight-pill">✓ Sanctioned by Public Health Dept, Maharashtra (2024)</div>
+          <div class="highlight-pill">✓ Affiliated to MUHS, Nashik (College Code: 154153)</div>
+          <div class="highlight-pill">✓ State CET Cell Portal Conformance (Code: 09385)</div>
+          <div class="highlight-pill">✓ National AISHE Certification (Code: C-74466)</div>
         </div>
-        <p>Our 2030 Campus Master Plan integrates sustainable architecture, biophilic study spaces, and high-performance computing infrastructure.</p>
+        <p>Built with modern lecture theatres, specialized anatomy and clinical labs, and expansive residential and digital library amenities.</p>
       `
     },
     social: {
-      badge: 'Social Responsibility',
-      title: 'Community Outreach, Sustainability Drives & Civic Engagement',
+      badge: 'Public Health & Rural Outreach',
+      title: '50+ Rural Health Screening Camps & Preventive Drives',
       content: `
-        <p>Fostering empathy and societal stewardship through purposeful, sustained community initiatives:</p>
+        <p>Extending compassionate healthcare directly into villages and remote districts of Marathwada:</p>
         <div class="highlights-pill-grid" style="margin-bottom: 1.2rem;">
-          <div class="highlight-pill">✓ Village Adoption &amp; Rural Literacy Drives</div>
-          <div class="highlight-pill">✓ Environmental Conservation Initiatives</div>
-          <div class="highlight-pill">✓ Blood Donation &amp; Free Medical Camps</div>
-          <div class="highlight-pill">✓ STEM Education for Underprivileged Youth</div>
+          <div class="highlight-pill">✓ 50+ Rural Village Health Camps Conducted</div>
+          <div class="highlight-pill">✓ Free Immunization, Maternal &amp; Child Health Clinics</div>
+          <div class="highlight-pill">✓ Non-Communicable Disease (NCD) Screenings</div>
+          <div class="highlight-pill">✓ Community Hygiene &amp; Nutritional Awareness Drives</div>
         </div>
-        <p>Students earn civic service recognition while developing deep awareness of local and global socio-ecological challenges.</p>
+        <p>Faculty and student cohorts work hand-in-hand with primary healthcare centres to deliver life-saving preventative care to thousands of rural residents.</p>
       `
     }
   };
@@ -293,19 +294,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. LIVE SEARCH FUNCTIONALITY
   // =========================================================================
   const searchableItems = [
-    { cat: 'Vision & Mission', title: 'Vision Statement — Academic Excellence & Innovation', target: 'vision-mission' },
-    { cat: 'Vision & Mission', title: 'Mission Statement — Nurture Talent & Promote Knowledge', target: 'vision-mission' },
-    { cat: 'About', title: 'Principal Leadership Biography & Credentials', modal: 'aboutModal' },
-    { cat: 'Institutional Highlights', title: 'Accreditation Metrics & Global Alumni Network', modal: 'knowMoreModal' },
-    { cat: 'Focus Area', title: 'Academic Excellence & Outcome-Based Education', focus: 'academic' },
-    { cat: 'Focus Area', title: 'Innovation, Research & Startup Incubator Hub', focus: 'innovation' },
-    { cat: 'Focus Area', title: 'Student Development, Mentorship & Clubs', focus: 'student' },
-    { cat: 'Focus Area', title: 'Industry Collaboration & Corporate MoUs', focus: 'industry' },
-    { cat: 'Focus Area', title: 'Institutional Growth, Green Campus & Infrastructure', focus: 'growth' },
-    { cat: 'Focus Area', title: 'Social Responsibility & Community Engagement', focus: 'social' },
-    { cat: 'Achievements', title: 'National Leadership Award & Accreditations (A++)', modal: 'achievementsModal' },
-    { cat: 'Message', title: 'Principal’s Annual Address to Students and Community', modal: 'messageModal' },
-    { cat: 'Contact', title: 'Appointment Request & Office Coordinates', modal: 'connectModal' }
+    { cat: 'Principal Leadership', title: 'Mr. Manoj L. Deshmukh · Principal cum Professor & SWA President', modal: 'aboutModal' },
+    { cat: 'Vision & Mission', title: 'Our Vision — Benchmark Learning Institution in Healthcare', target: 'vision-mission' },
+    { cat: 'Vision & Mission', title: 'Our Mission — Quality Nursing Education for Rural Communities', target: 'vision-mission' },
+    { cat: 'Institutional Highlights', title: 'Government Sanction, MUHS Code 154153, CET 09385 & AISHE C-74466', modal: 'knowMoreModal' },
+    { cat: 'Focus Area', title: 'Clinical Competence, Bedside Rotations & Simulation Skills Lab', focus: 'academic' },
+    { cat: 'Focus Area', title: 'Medical Surgical & Oncology Nursing Specialization', focus: 'innovation' },
+    { cat: 'Focus Area', title: 'Rural Health & Social Inclusion for Underserved Students', focus: 'student' },
+    { cat: 'Focus Area', title: 'Ethics, Empathy, Nightingale Oath & SWA Leadership', focus: 'industry' },
+    { cat: 'Focus Area', title: 'Institutional Growth & State Govt / MUHS Nashik Conformance', focus: 'growth' },
+    { cat: 'Focus Area', title: 'Public Health Outreach & 50+ Rural Health Screening Camps', focus: 'social' },
+    { cat: 'Achievements', title: 'Milestones: 2024 Govt Conformance, MUHS Affiliation & SWA Honors', modal: 'achievementsModal' },
+    { cat: 'Official Message', title: 'Message from the Principal’s Desk — Mr. Manoj L. Deshmukh', modal: 'messageModal' },
+    { cat: 'Contact & Office', title: 'Office of the Principal, Jalna (govt.bscnursingjalna@gmail.com)', modal: 'connectModal' }
   ];
 
   const searchInput = document.getElementById('portfolioSearchInput');
